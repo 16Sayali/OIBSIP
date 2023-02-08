@@ -4,7 +4,7 @@ public class NumberGuessingGame {
 	
 	public void menu(ArrayList<Integer> scoreBoard) {
         NumberGuessingGame methodChange = new NumberGuessingGame();
-        Scanner input = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("--------------------");
         System.out.println("Welcome to the number game");
         System.out.println("1) Play the Game");
@@ -13,11 +13,11 @@ public class NumberGuessingGame {
         System.out.println("--------------------");
         try {
             System.out.print("What action would you like to do from the above actions? ");
-            int menuOption = input.nextInt();
+            int menuOption = sc.nextInt();
             switch (menuOption) {
                 case 1:
                     System.out.print("\n"+"What would you like the range of the numbers to be? ");
-                    int numberRange = input.nextInt();
+                    int numberRange = sc.nextInt();
                     int randomNumber = methodChange.randomNumber(numberRange);
                     methodChange.guessNumber(randomNumber);
                     break;
@@ -42,12 +42,12 @@ public class NumberGuessingGame {
         return randomNumber;
     }
     public void guessNumber(int randomNumber) {
-        Scanner input = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int userGuess;
         int guess = 0;
         do {
             System.out.print("Enter your guess number: ");
-            userGuess = input.nextInt();
+            userGuess = sc.nextInt();
             guess++;
             if (userGuess > randomNumber) {
                 System.out.println("Lower");
@@ -82,9 +82,5 @@ public class NumberGuessingGame {
 		// TODO Auto-generated method stub
 		NumberGuessingGame methodChange = new NumberGuessingGame();
         methodChange.menu(scoreBoard);
-
 	}
-	
-	
-
 }
