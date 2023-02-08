@@ -38,12 +38,15 @@ class login extends JFrame implements ActionListener
             new OnlineTestBegin(userValue); 
         else{
             textField2.setText("Enter Password");
+            //action is performed
             actionPerformed(ae);
+            
         }
     }     
 }  
 class OnlineTestBegin extends JFrame implements ActionListener  
 {  
+	//actions listener is interface
     JLabel l;  
     JLabel l1;  
     JRadioButton jb[]=new JRadioButton[6];  
@@ -74,6 +77,7 @@ class OnlineTestBegin extends JFrame implements ActionListener
         set();  
         l.setBounds(30,40,450,20);
         l1.setBounds(20,20,450,20);
+        //setting positions
         jb[0].setBounds(50,80,100,20);  
         jb[1].setBounds(50,110,100,20);  
         jb[2].setBounds(50,140,100,20);  
@@ -178,8 +182,8 @@ class OnlineTestBegin extends JFrame implements ActionListener
         }  
         if(current==5)  
         {  
-            l.setText("Que6: Identify the infinite loop?");  
-            jb[0].setText("for(;;)");jb[1].setText("for()i=0;j<1;i--");jb[2].setText("for(int=0;i++)");jb[3].setText("if(All of the above)");  
+            l.setText("Que6: Which of these cannot be used for a variable name in Java?");  
+            jb[0].setText("identifier & keyword");jb[1].setText(" identifier");jb[2].setText("keyword");jb[3].setText("None of the above");  
         }  
         if(current==6)  
         {  
